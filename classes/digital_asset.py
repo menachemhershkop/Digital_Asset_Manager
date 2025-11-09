@@ -17,8 +17,8 @@ class DigitalAsset(ABC):
     def cost(self):
         return self.__cost
     @abstractmethod
-    def calculate_value(self):
+    def calculate_value(self) -> float:
         pass
     @abstractmethod
-    def asset_type(self):
+    def asset_type(self) -> str:
         pass
