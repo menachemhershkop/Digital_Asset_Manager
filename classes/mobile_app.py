@@ -10,9 +10,10 @@ class MobileApp(DigitalAsset,Reportable):
         self._downloads=downloads
         self._avg_rating=avg_rating
     def asset_type(self) -> str:
-        return "MOBILE_AOO"
+        return "MOBILE_APP"
     def calculate_value(self) -> float:
         value=self._downloads*0.5+self._avg_rating*1000
         return value
     def to_report_line(self):
-        return "type:", self.asset_type(),"name:",self.name,"date:",self.time, "cost: ", self.cost,"downloads: ",self._downloads,"rating: ",self._avg_rating, "value: ",self.calculate_value()
+        report = "type:", self.asset_type(),"name:",self.name,"date:",self.time, "cost: ", self.cost,"downloads: ",self._downloads,"rating: ",self._avg_rating, "value: ",self.calculate_value()
+        return report

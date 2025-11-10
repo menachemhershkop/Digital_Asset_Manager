@@ -17,7 +17,7 @@ class AssertPortfolio:
     def save_portfolio(self):
         with open(self.__filename,"w") as file:
             for i in self.__assets:
-                file.write(i.to_reprt_line())
+                file.write(i.to_report_line())
     def load_portfolio(self):
         self.__assets=[]
         try:
